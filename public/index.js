@@ -3,6 +3,9 @@ const strictEquals = (ValueA, ValueB) => {
   if (isNaN(ValueA) && isNaN(ValueB)) {
     result = false;
   }
+  if (!isNaN(ValueA) && !isNaN(ValueB) && Object.is(ValueA, ValueB)) {
+    result = true;
+  }
 
   return console.log(ValueA + " | " + ValueB + " | " + result);
 };
