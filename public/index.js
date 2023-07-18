@@ -1,5 +1,8 @@
 const strictEquals = (ValueA, ValueB) => {
   let result = false;
+  if (isNaN(ValueA) && isNaN(ValueB)) {
+    result = false;
+  }
 
   return console.log(ValueA + " | " + ValueB + " | " + result);
 };
